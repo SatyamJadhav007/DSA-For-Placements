@@ -44,7 +44,9 @@ int knapSackDP(int W,vector<Item>items){
     int n=items.size();
     // dp[n][w] n=number of items(valuei,weighti),w=All the possible weight there can be 
     vector<vector<int>>dp(n+1,vector<int>(W+1,0)); 
-
+    // for(int w=0;w<=W;w++){
+    //     dp[0][w]=0;
+    // }
     for(int i=1;i<=n;i++){
         for(int w=0;w<=W;w++){
             //If the previous item weight is less than current weight
